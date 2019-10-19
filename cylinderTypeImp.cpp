@@ -16,6 +16,10 @@ void cylinderType::print() const
     cout << "Radius: " << radius << endl;
     cout << "Circumference: " << getCircumference() << endl;
     cout << "Area: " << getArea() << endl;
+
+    cout << "Cylinder height: " << height << endl;
+    cout << "Cylinder surface area: " << getSurfaceArea() << endl;
+    cout << "Cylinder volume: " << getVolume() << endl;
 }
 
 void cylinderType::setHeight(double h) {
@@ -23,11 +27,15 @@ void cylinderType::setHeight(double h) {
 }
 
 void cylinderType::setBaseCenter(double x, double y) {
-
+    xCoordinate = x;
+    yCoordinate = y;
 }
 
 void cylinderType::setCenterRadiusHeight(double x, double y, double r, double h) {
-
+    xCoordinate = x;
+    yCoordinate = y;
+    radius = r;
+    height = h;
 }
 
 double cylinderType::getHeight() const {
