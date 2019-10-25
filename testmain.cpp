@@ -1,3 +1,8 @@
+/**
+ * Alex Chheng
+ * CECS 282 Lab 6.1
+ */
+
 #include <iostream>
 #include <iomanip>
 #include "cylinderType.h"

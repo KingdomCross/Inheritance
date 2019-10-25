@@ -9,13 +9,15 @@ using namespace std;
 
 void cylinderType::print() const
 {
-    cout << "Center: ";
+    /*cout << "Center: ";
     pointType::print();
     cout << endl;
 
     cout << "Radius: " << radius << endl;
     cout << "Circumference: " << getCircumference() << endl;
     cout << "Area: " << getArea() << endl;
+*/
+    circleType::print();
 
     cout << "Cylinder height: " << height << endl;
     cout << "Cylinder surface area: " << getSurfaceArea() << endl;
@@ -43,11 +45,12 @@ double cylinderType::getHeight() const {
 }
 
 double cylinderType::getVolume() const {
-    return 3.1416 * radius * radius * height;
+    return getArea() * height;
+    //return 3.1416 * radius * radius * height;
 }
 
 double cylinderType::getSurfaceArea() const {
-    return (2 * 3.1416 * radius * radius) + (2 * 3.1416 * radius * height);
+    return getCircumference() * height + getArea() * 2;
 }
 
 cylinderType::cylinderType(double x, double y, double r, double h)
